@@ -1,0 +1,58 @@
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet
+- goodbye
+- info_about_schedule
+- participants_number
+- criteria
+- info_about_contact
+- info_about_course
+- info_about_locations
+entities:
+- prof
+- contact
+- schedule
+- semester
+- course_type
+- amphitheatre
+responses:
+  utter_goodbye:
+  - text: Αντίο.
+  utter_greet:
+  - text: "Γεια σου! \n Ονομάζομαι Glibot."
+  utter_ask1:
+  - text: Πως μπορώ να σε εξυπηρετήσω;
+  utter_ask:
+  - text: Σε τι άλλο μπορώ να σε εξυπηρετήσω;
+  utter_participants_number:
+  - text: "Ο αριθμός εισακτέων κατ’ έτος ορίζεται κατ’ ανώτατο όριο σε 30 μεταπτυχιακούς/ες\
+      \ φοιτητές/τριες.\nΟ μέγιστος αριθμός μεταπτυχιακών φοιτητών/τριών του ΠΜΣ ορίζεται\
+      \ κατ’ ανώτατο όριο σε 60 μεταπτυχιακούς/ες φοιτητές/τριες. \nΟ μέγιστος αριθμός\
+      \ των μεταπτυχιακών φοιτητών/τριών στο ΠΜΣ σε σχέση και με τον αριθμό των προπτυχιακών\
+      \ φοιτητών/τριών και των διδασκόντων για τη διασφάλιση της ποιότητας όλων των\
+      \ κύκλων σπουδών ορίζεται κατ’ ανώτατο όριο επίσης σε 60 μεταπτυχιακούς/ες φοιτητές/τριες.\n\
+      Ο μέγιστος αριθμός μεταπτυχιακών φοιτητών/τριών ανά διδάσκοντα του Π.Μ.Σ. ορίζεται\
+      \ σε οκτώ (8).\n"
+  utter_criteria:
+  - text: "Τα κριτήρια επιλογής εισακτέων ομαδοποιούνται σε πέντε παραμέτρους. Οι\
+      \ 5 αυτοί παράμετροι είναι:\n1) Ο γενικός βαθμός πτυχίου\n2) Ενδεχόμενες δημοσιευμένες\
+      \ εργασίες του υποψηφίου\n3) Η γλωσσομάθεια του υποψηφίου\n4) Η γενική ερευνητική\
+      \ ή επαγγελματική δραστηριότητα\n5) Η επιτυχία στην προσωπική συνέντευξη\n"
+  utter_criteria_link:
+  - text: Για περισσότερες πληροφορίες, επισκέψου την διεύθυνση https://ihst.csd.auth.gr/studies/#kritiria-epilogis
+actions:
+- action_get_info_about_locations
+- action_get_contact
+- action_get_schedule
+- action_get_info_about_course
+- action_fallback
+- action_delay
+- utter_goodbye
+- utter_greet
+- utter_ask1
+- utter_ask
+- utter_participants_number
+- utter_criteria
+- utter_criteria_link
